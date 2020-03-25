@@ -8,8 +8,7 @@ class MeetingTest(TestCase):
         type=Meeting(meetingtitle='Weekly team meeting')
         self.assertEqual(str(type), type.meetingtitle)
 
-   def test_table(self):
-       self.assertEqual(str(Meeting._meta.db_table), 'Meeting Name')
+class setup
 
 
 
