@@ -17,3 +17,10 @@ def getmeetings(request):
 "Make a view that takes an int id as an parameter and retrieves "
 "the meeting that has that id"
 
+def meetingdetail(request, id):
+    md=get_object_or_404(MeetingMinutes, pk=id)
+    context={
+        'md' : md,
+    }
+    return render(request, 'pythonclubapp/meetingid.html', context=context)
+

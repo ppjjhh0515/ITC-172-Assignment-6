@@ -10,13 +10,13 @@
     <th>Agenda</th>
 
 </tr>
-{% for t in meeting_list %}
+{% for m in meeting_list %}
 <tr>
-    <td>{{ t.meetingtitle }}</td>
-    <td>{{ t.meetingdate }}</td>
-    <td>{{ t.meetingtime }}</td>
-    <td>{{ t.location }}</td>
-    <td>{{ t.agenda }}</td>
+    <td><a href="{% url 'meetingid' id=m.id %}"></a>{{ m.meetingtitle }}</td>
+    <td>{{ m.meetingdate }}</td>
+    <td>{{ m.meetingtime }}</td>
+    <td>{{ m.location }}</td>
+    <td>{{ m.agenda }}</td>
 </tr>
 
 {% endfor %}
